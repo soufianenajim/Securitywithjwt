@@ -23,7 +23,7 @@ public class FooController {
     }
 
     // API - read
-    @PreAuthorize("#oauth2.hasScope('foo') and #oauth2.hasScope('read') and  hasRole('ADMIN')")
+    @PreAuthorize("#oauth2.hasScope('foo') and #oauth2.hasScope('read') and  hasAuthority('ROLE_ADMIN')")
     @RequestMapping(method = RequestMethod.GET, value = "/foos/{id}")
     @ResponseBody
     public Foo findById(@PathVariable final long id) {

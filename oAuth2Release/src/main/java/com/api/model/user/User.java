@@ -45,10 +45,10 @@ public class User implements UserDetails, Serializable {
 
     @Column(name = "ENABLED")
     private boolean enabled;
-    
-    @Column(name = "ROLE")
-    @Enumerated(EnumType.STRING)
-    private Role role;
+//    
+//    @Column(name = "ROLE")
+//    @Enumerated(EnumType.STRING)
+//    private Role role;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "USERS_AUTHORITIES", joinColumns = @JoinColumn(name = "USER_ID", referencedColumnName = "ID"), inverseJoinColumns = @JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID"))
