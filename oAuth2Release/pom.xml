@@ -38,6 +38,7 @@
 		<maven-war-plugin.version>3.2.0</maven-war-plugin.version>
 		<maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
 		<cargo-maven2-plugin.version>1.6.5</cargo-maven2-plugin.version>
+		<springfox-version>2.7.0</springfox-version>
 	</properties>
 	<dependencies>
 
@@ -76,6 +77,11 @@
 			<artifactId>spring-security-jwt</artifactId>
 			<version>${jwt.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.7.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -112,6 +118,45 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!--SpringFox dependencies -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.18</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+    		<groupId>commons-io</groupId>
+    		<artifactId>commons-io</artifactId>
+    		<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20171018</version>
+		</dependency>
+		   <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-joda</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+		
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 
